@@ -10,10 +10,10 @@ public class EmployeeWage {
 
     public static void main(String[] args) {
 
-
+        int empHours = 0 ;
         int day = 1;
         int totalWage = 0;
-        while (day <= WORKING_DAYS_PER_MONTH) {
+        while (day < WORKING_DAYS_PER_MONTH && empHours <= 100) {
             int dailyWage = 0;
             int employeeCheck = (int) Math.floor(Math.random() * 10) % 3;
             System.out.println(employeeCheck);
@@ -21,18 +21,24 @@ public class EmployeeWage {
                 case IS_FULL_TIME:
                     System.out.println("Employee is present");
                     dailyWage = EMP_WAGE_PER_HOUR * FULL_TIME_HOUR;
+                    empHours += FULL_TIME_HOUR ;
+
                     break;
                 case IS_PART_TIME:
                     System.out.println("Employee is present");
                     dailyWage = EMP_WAGE_PER_HOUR * PART_TIME_HOUR;
+                    empHours += PART_TIME_HOUR ;
+
                     break;
                 default:
                     System.out.println("Employee is absent");
             }
             day++;
             totalWage += dailyWage ;
+            System.out.println("Total employee hours are " + empHours);
+            System.out.println("Total wage for " + day + " day is " + totalWage);
         }
 
-        System.out.println("Total wage for " + day + " day is " + totalWage);
+
     }
 }
