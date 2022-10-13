@@ -8,8 +8,7 @@ public class EmployeeWage {
     static final int IS_FULL_TIME = 1;
     static final int IS_PART_TIME = 2;
 
-    public static void main(String[] args) {
-
+    public static void calculateEmpWage(){
         int empHours = 0 ;
         int day = 1;
         int totalWage = 0;
@@ -38,6 +37,10 @@ public class EmployeeWage {
             System.out.println("Total employee hours are " + empHours);
             System.out.println("Total wage for " + day + " day is " + totalWage);
         }
+    }
+    public static void main(String[] args) {
+
+        calculateEmpWage();
 
 
     }
