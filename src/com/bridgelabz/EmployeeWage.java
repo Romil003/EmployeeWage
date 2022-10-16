@@ -1,12 +1,25 @@
 package com.bridgelabz;
 
 public class EmployeeWage {
-    static final int EMP_WAGE_PER_HOUR = 20;
-    static int FULL_TIME_HOUR = 8;
-    static int PART_TIME_HOUR = 4;
-    static final int WORKING_DAYS_PER_MONTH = 20;
+    int EMP_WAGE_PER_HOUR ;
+    int FULL_TIME_HOUR ;
+    int PART_TIME_HOUR ;
+    int WORKING_DAYS_PER_MONTH ;
     static final int IS_FULL_TIME = 1;
     static final int IS_PART_TIME = 2;
+
+
+    public EmployeeWage() {
+    }
+
+    public EmployeeWage(int EMP_WAGE_PER_HOUR, int FULL_TIME_HOUR, int PART_TIME_HOUR, int WORKING_DAYS_PER_MONTH) {
+        this.EMP_WAGE_PER_HOUR = EMP_WAGE_PER_HOUR;
+        this.FULL_TIME_HOUR = FULL_TIME_HOUR;
+        this.PART_TIME_HOUR = PART_TIME_HOUR;
+        this.WORKING_DAYS_PER_MONTH = WORKING_DAYS_PER_MONTH;
+    }
+
+    public void calculateEmployeeWage() {
 
     public static void calculateEmpWage(){
         int empHours = 0 ;
@@ -37,11 +50,13 @@ public class EmployeeWage {
             System.out.println("Total employee hours are " + empHours);
             System.out.println("Total wage for " + day + " day is " + totalWage);
         }
+
+
     }
+
     public static void main(String[] args) {
-
-        calculateEmpWage();
-
+        EmployeeWage company1 = new EmployeeWage(30,10,6,25);
+        company1.calculateEmployeeWage();
 
     }
 }
