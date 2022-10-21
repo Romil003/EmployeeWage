@@ -11,7 +11,7 @@ public class EmployeeWage {
     public static void main(String[] args) {
 
         int empHours = 0 ;
-        int day = 1;
+        int day = 1 ;
         int totalWage = 0;
         while (day < WORKING_DAYS_PER_MONTH && empHours <= 100) {
             int dailyWage = 0;
