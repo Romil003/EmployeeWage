@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 public class EmployeeWage {
-    static final int EMP_WAGE_PER_HOUR = 20;
+    static final int EMP_WAGE_PER_HOUR = 20 ;
     static int FULL_TIME_HOUR = 8;
     static int PART_TIME_HOUR = 4;
     static final int WORKING_DAYS_PER_MONTH = 20;
