@@ -50,7 +50,7 @@ class EmpWageBuilder implements EmpWageInterface {
             totalWage += dailyWage ;
 
         }
-        return totalWage;
+        return totalWage ;
 
     }
 
