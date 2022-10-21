@@ -5,8 +5,8 @@ public class EmployeeWage {
     static int FULL_TIME_HOUR = 8;
     static int PART_TIME_HOUR = 4;
     static final int WORKING_DAYS_PER_MONTH = 20;
-    static final int IS_FULL_TIME = 1;
-    static final int IS_PART_TIME = 2;
+    static final int IS_FULL_TIME = 1 ;
+    static final int IS_PART_TIME = 2 ;
 
     public static void main(String[] args) {
 
