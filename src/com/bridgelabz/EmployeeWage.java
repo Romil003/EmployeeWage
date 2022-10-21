@@ -55,10 +55,10 @@ class EmpWageBuilder implements EmpWageInterface {
     }
 
     public static void main(String[] args) {
-        EmpWageBuilder company1 = new EmpWageBuilder(30,10,6,25);
-        EmpWageBuilder company2 = new EmpWageBuilder(20,11,7,23);
-        EmpWageBuilder company3 = new EmpWageBuilder(25,12,8,28);
-        EmpWageBuilder company4 = new EmpWageBuilder(60,14,10,30);
+        EmpWageBuilder company1 = new EmpWageBuilder(30,10,6,25) ;
+        EmpWageBuilder company2 = new EmpWageBuilder(20,11,7,23) ;
+        EmpWageBuilder company3 = new EmpWageBuilder(25,12,8,28) ;
+        EmpWageBuilder company4 = new EmpWageBuilder(60,14,10,30) ;
 
 //        int[] companyEmpWage = new int[4];
 //        companyEmpWage[0] = company1.calculateEmployeeWage();
