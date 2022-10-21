@@ -46,11 +46,16 @@ class EmpWageBuilder implements EmpWageInterface {
                 default:
             }
             day++;
-            System.out.println("Daily Wage = " + dailyWage);
+//            System.out.println("Daily Wage = " + dailyWage);
             totalWage += dailyWage ;
 
         }
         return totalWage ;
+    }
+
+    public int getTotalWage(){
+        int overallWage = calculateEmployeeWage();
+        return overallWage;
     }
 
     public static void main(String[] args) {
@@ -59,21 +64,21 @@ class EmpWageBuilder implements EmpWageInterface {
         EmpWageBuilder company3 = new EmpWageBuilder(25,12,8,28) ;
         EmpWageBuilder company4 = new EmpWageBuilder(60,14,10,30) ;
 
-        System.out.println("Company 1 Wage : ");
-        int wage1 = company1.calculateEmployeeWage();
-        System.out.println();
+        System.out.print("Company 1 Wage : ");
+        int wage1 = company1.getTotalWage();
+        System.out.println(wage1);
 
-        System.out.println("Company 2 Wage : ");
-        int wage2 = company2.calculateEmployeeWage();
-        System.out.println();
+        System.out.print("Company 2 Wage : ");
+        int wage2 = company2.getTotalWage();
+        System.out.println(wage2);
 
-        System.out.println("Company 3 Wage : ");
-        int wage3 = company3.calculateEmployeeWage();
-        System.out.println();
+        System.out.print("Company 3 Wage : ");
+        int wage3 = company3.getTotalWage();
+        System.out.println(wage3);
 
-        System.out.println("Company 4 Wage : ");
-        int wage4 = company4.calculateEmployeeWage();
-
+        System.out.print("Company 4 Wage : ");
+        int wage4 = company4.getTotalWage();
+        System.out.println(wage4);
 
         ArrayList<Integer> companies = new ArrayList<>();
         companies.add(wage1);
