@@ -46,11 +46,11 @@ class EmpWageBuilder implements EmpWageInterface {
                 default:
             }
             day++;
+            System.out.println("Daily Wage = " + dailyWage);
             totalWage += dailyWage ;
 
         }
-        return totalWage;
-
+        return totalWage ;
     }
 
     public static void main(String[] args) {
@@ -59,27 +59,33 @@ class EmpWageBuilder implements EmpWageInterface {
         EmpWageBuilder company3 = new EmpWageBuilder(25,12,8,28);
         EmpWageBuilder company4 = new EmpWageBuilder(60,14,10,30);
 
-//        int[] companyEmpWage = new int[4];
-//        companyEmpWage[0] = company1.calculateEmployeeWage();
-//        companyEmpWage[1] = company2.calculateEmployeeWage();
-//        companyEmpWage[2] = company3.calculateEmployeeWage();
-//        companyEmpWage[3] = company4.calculateEmployeeWage();
+        System.out.println("Company 1 Wage : ");
+        int wage1 = company1.calculateEmployeeWage();
+        System.out.println();
+
+        System.out.println("Company 2 Wage : ");
+        int wage2 = company2.calculateEmployeeWage();
+        System.out.println();
+
+        System.out.println("Company 3 Wage : ");
+        int wage3 = company3.calculateEmployeeWage();
+        System.out.println();
+
+        System.out.println("Company 4 Wage : ");
+        int wage4 = company4.calculateEmployeeWage();
+
 
         ArrayList<Integer> companies = new ArrayList<>();
-        companies.add(company1.calculateEmployeeWage());
-        companies.add(company2.calculateEmployeeWage());
-        companies.add(company3.calculateEmployeeWage());
-        companies.add(company4.calculateEmployeeWage());
+        companies.add(wage1);
+        companies.add(wage2);
+        companies.add(wage3);
+        companies.add(wage4);
 
         System.out.println();
         System.out.println("List of companies are : " + companies);
 
 
-//        System.out.print("{ ");
-//        for (int i=0; i<companyEmpWage.length;i++){
-//            System.out.print(companyEmpWage[i] + " ");
-//        }
-//        System.out.print("}");
+
 
 
     }
