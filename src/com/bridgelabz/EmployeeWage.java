@@ -46,7 +46,6 @@ class EmpWageBuilder implements EmpWageInterface {
                 default:
             }
             day++;
-//            System.out.println("Daily Wage = " + dailyWage);
             totalWage += dailyWage ;
 
         }
