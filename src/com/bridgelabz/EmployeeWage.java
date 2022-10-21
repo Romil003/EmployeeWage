@@ -1,5 +1,7 @@
 package com.bridgelabz;
 
+import java.util.ArrayList;
+
 class EmpWageBuilder implements EmpWageInterface {
 
     private int EMP_WAGE_PER_HOUR ;
@@ -57,17 +59,27 @@ class EmpWageBuilder implements EmpWageInterface {
         EmpWageBuilder company3 = new EmpWageBuilder(25,12,8,28);
         EmpWageBuilder company4 = new EmpWageBuilder(60,14,10,30);
 
-        int[] companyEmpWage = new int[4];
-        companyEmpWage[0] = company1.calculateEmployeeWage();
-        companyEmpWage[1] = company2.calculateEmployeeWage();
-        companyEmpWage[2] = company3.calculateEmployeeWage();
-        companyEmpWage[3] = company4.calculateEmployeeWage();
+//        int[] companyEmpWage = new int[4];
+//        companyEmpWage[0] = company1.calculateEmployeeWage();
+//        companyEmpWage[1] = company2.calculateEmployeeWage();
+//        companyEmpWage[2] = company3.calculateEmployeeWage();
+//        companyEmpWage[3] = company4.calculateEmployeeWage();
 
-        System.out.print("{ ");
-        for (int i=0; i<companyEmpWage.length;i++){
-            System.out.print(companyEmpWage[i] + " ");
-        }
-        System.out.print("}");
+        ArrayList<Integer> companies = new ArrayList<>();
+        companies.add(company1.calculateEmployeeWage());
+        companies.add(company2.calculateEmployeeWage());
+        companies.add(company3.calculateEmployeeWage());
+        companies.add(company4.calculateEmployeeWage());
+
+        System.out.println();
+        System.out.println("List of companies are : " + companies);
+
+
+//        System.out.print("{ ");
+//        for (int i=0; i<companyEmpWage.length;i++){
+//            System.out.print(companyEmpWage[i] + " ");
+//        }
+//        System.out.print("}");
 
 
     }
